@@ -1,5 +1,7 @@
 package com.leonardo.apiestoque.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.leonardo.apiestoque.system.GenericEntity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,7 +11,7 @@ import java.math.BigDecimal;
 @Entity
 @Getter
 @Setter
-public class Produto {
+public class Produto extends GenericEntity<Integer> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,9 +25,8 @@ public class Produto {
 
     private BigDecimal valor;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_categoria", referencedColumnName = "id", nullable = false)
-    private Categoria categoria;
-
+//    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    @JoinColumn(name = "id_categoria", referencedColumnName = "id", nullable = false)
+//    private Categoria categoria;
 
 }

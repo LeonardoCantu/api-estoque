@@ -1,5 +1,6 @@
 package com.leonardo.apiestoque.model;
 
+import com.leonardo.apiestoque.system.GenericEntity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,7 +10,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-public class Categoria {
+public class Categoria extends GenericEntity<Integer> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,7 +18,7 @@ public class Categoria {
 
     private String descricao;
 
-    @OneToMany(mappedBy = "categoria")
-    private List<Produto> produtos;
+//    @OneToMany(mappedBy = "categoria")
+//    private List<Produto> produtos;
 
 }

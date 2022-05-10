@@ -5,7 +5,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 
-public interface IProdutoService {
+@Service
+public interface IProdutoService   {
 
     Produto incluir(Produto produto);
 

@@ -18,4 +18,9 @@ public class ProdutoController implements IProdutoController {
         iProdutoService.incluir(produto);
         return ResponseEntity.ok(produto);
     }
+
+    @Override
+    public void editar(Produto produto, Integer id) {
+        iProdutoService.editar(produto, id);
+    }
 }

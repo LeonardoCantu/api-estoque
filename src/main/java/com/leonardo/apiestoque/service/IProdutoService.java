@@ -10,4 +10,6 @@ public interface IProdutoService   {
 
     Produto incluir(Produto produto);
 
+    void editar(Produto produto, Integer id);
+
 }

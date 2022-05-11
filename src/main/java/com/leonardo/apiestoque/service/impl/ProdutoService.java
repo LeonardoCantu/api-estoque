@@ -11,10 +11,15 @@ public class ProdutoService extends GerenicService<Produto, Integer> implements 
     @Override
     public Produto incluir(Produto produto) {
 
+
         return save(produto);
     }
 
-    private void prepareInsert(Produto produto) {
+    @Override
+    public void editar(Produto produto, Integer id) {
+       Produto produtoManager = findAndValidate(id);
 
     }
+
+
 }
